@@ -6,6 +6,8 @@
   --accent-2: #a91d3a;
   --panel: rgba(255, 255, 255, 0.82);
   --border: rgba(22, 22, 26, 0.18);
+  --font-heading: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
 }
 
 * {

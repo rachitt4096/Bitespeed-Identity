@@ -63,8 +63,16 @@ export default function IdentifyDemo() {
         | { error?: string };
 
       if (!response.ok) {
+        const message =
+          typeof data === "object" &&
+          data !== null &&
+          "error" in data &&
+          typeof data.error === "string"
+            ? data.error
+            : "Request failed";
+
         setResult(null);
-        setError(data.error ?? "Request failed");
+        setError(message);
         return;
       }
 
