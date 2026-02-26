@@ -6,9 +6,7 @@ Identity reconciliation service for the BiteSpeed backend task, with:
 - Next.js demo frontend (`http://localhost:3001`)
 
 ## Live Endpoint
-- `POST <ADD_YOUR_DEPLOYED_URL_HERE>/identify`
-
-Update this line after deployment so your submission satisfies the “host and share endpoint in README” requirement.
+- `POST https://bitespeed-identity-alpha.vercel.app/identify`
 
 ## Requirement Checklist (from PDF)
 - [x] Relational SQL database (`PostgreSQL`) with `Contact` table fields required by task
@@ -21,7 +19,7 @@ Update this line after deployment so your submission satisfies the “host and s
 - [x] Response format includes `contact.primaryContatctId` (task spelling preserved)
 - [x] Commit history split into focused commits
 - [x] Frontend demo added to visualize endpoint behavior
-- [ ] Deploy online and replace placeholder live URL above
+- [x] Deploy online and replace placeholder live URL above
 - [ ] Submit hosted endpoint using BiteSpeed form
 
 ## API Contract
