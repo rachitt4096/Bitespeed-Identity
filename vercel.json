@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "routes": [
+    {
+      "src": "/identify",
+      "dest": "api/identify.ts"
+    }
+  ]
+}

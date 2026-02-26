@@ -84,19 +84,29 @@ npm run build
 npm test
 ```
 
-## Deploy (Render)
-A `render.yaml` blueprint is included.
+## Deploy (Vercel)
+This repo is ready for Vercel serverless deployment with:
+- `vercel.json` route mapping `/identify` to `api/identify.ts`
+- `api/identify.ts` function handler
 
-### Option A: Blueprint deploy
+### Vercel Steps
 1. Push this repo to GitHub.
-2. In Render, create service using `render.yaml`.
-3. Set `DATABASE_URL` in Render environment variables.
-4. Deploy.
-5. Replace `Live Endpoint` in this README with deployed URL.
+2. In Vercel, import the GitHub repo.
+3. Keep root directory as project root (`/`).
+4. Set environment variable:
+`DATABASE_URL=<your_postgres_connection_string>`
+5. Deploy.
+6. Verify:
+`POST https://<your-vercel-domain>/identify`
+7. Replace `Live Endpoint` in this README with deployed URL.
 
-### Option B: Manual deploy settings
-- Build command: `npm ci && npm run prisma:generate && npm run build`
-- Start command: `npm run prisma:migrate:deploy && npm run start`
+### Build Settings (if asked)
+- Install Command: `npm ci`
+- Build Command: `npm run vercel-build`
+- Output Directory: leave empty
+
+## Alternative Deploy (Render)
+`render.yaml` is also included if you prefer Render.
 
 ## Quick curl Check
 ```bash
